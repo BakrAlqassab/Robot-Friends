@@ -7,7 +7,7 @@ import 'tachyons';
 
 ReactDOM.render(  
   <React.StrictMode>
-    <App  dog ={'DooooooooooooooooooooooooooooooooooooooG '} greeting = { ' tomato Poteto '}/>,
+    <App  />,
    </React.StrictMode>,
   document.getElementById('root')
 );
