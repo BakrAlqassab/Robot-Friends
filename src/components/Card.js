@@ -1,16 +1,20 @@
-import "./card.css";
+import React from 'react'
+import "./Card.css";
 
 function Card(props) {
+  // function Card({id,name,email}) {
+  const {id,name,email} = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src='https://i.ibb.co/CzX7ZdR/126042827-1024409481406949-3603890258147417656-n.jpg' className="App-logo" alt="logo" />
-
-        <a className="App-link" href="">
-          Card
-        </a>
-      </header>
-    </div>
+    <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
+     <img alt='robots' src={`https://robohash.org/${id}?200*200`}/>
+     <div>
+     <h2>{name}</h2>
+     <p>{email}</p>
+     </div>
+     
+     
+     
+         </div>
   );
 }
 
