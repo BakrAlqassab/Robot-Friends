@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CardList from "./components/CardList";
-import SearchBox from "./SearchBox";
-import Scroll from "./Scroll";
+import CardList from "../components/CardList";
+import SearchBox from "../components/SearchBox";
+import Scroll from "../Scroll/Scroll";
 // import { robots } from "./Data/robots";
 import "./App.css";
 
@@ -12,21 +12,9 @@ class App extends Component {
       robots: [],
       searchField: "",
     };
-
-    console.log("React lify cycle methods");
-    console.log("Constructor");
   }
 
-  componentWillMount() {
-    //  fetch("https://jsonplaceholder.typicode.com/users")
-    //   .then((response) => {
-    //     return response.json();
-    //   })
-    //   .then((users) => {
-    //     this.setState({ robots: users });
-    //   });
-    console.log("componentWillMount");
-  }
+  componentWillMount() {}
 
   componentDidMount() {
     // this.setState({robots:robots})
@@ -37,21 +25,20 @@ class App extends Component {
       .then((users) => {
         this.setState({ robots: users });
       });
-    console.log("componentDidMount");
   }
   onSearchChange = (event) => {
     this.setState({ searchField: event.target.value });
   };
   // function App() {
   render() {
-    console.log("render");
-    const filterdRobots = this.state.robots.filter((robot) => {
+    const{robots,searchField} = this.state;
+    const filterdRobots = robots.filter((robot) => {
       return robot.name
         .toLowerCase()
-        .includes(this.state.searchField.toLowerCase());
+        .includes(searchField.toLowerCase());
     });
-    // console.log(filterdRobots);
-    if (this.state.robots.length === 0) {
+
+    if (!robots.length) {
       return <h1> Loading ....</h1>;
     } else {
       return (
