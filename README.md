@@ -1,6 +1,6 @@
 # Robot Friends
 
-[Clone this repo]()
+Clone this repo
 
 Run npm install
 
