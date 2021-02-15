@@ -5,7 +5,7 @@ function Scroll(props) {
       style={{
         overflowY: "scroll",
         border: "3px solid black",
-        height: "565px",
+        height: "565px", userSelect: "none"
       }}
     >
       {props.children}
